@@ -23,17 +23,35 @@ Siga os passos da atividade para entender os conceitos em cada etapa. Durante o 
    No terminal, execute:
    ```bash
    npm install
+   npm install -g expo-cli
    ```
 
-3. **Inicie o servidor do Expo:**
+3. **Link com seu projeto no Expo:**
+
+   Acesse o [Expo](https://expo.dev/)
+   - crie um usuário (se não tiver)
+   - crie um projeto
+   - guarde o número ID do projeto
+
    Execute:
    ```bash
    expo login #para se logar na sua conta
-   expo start
+   npm install -g eas-cli
+   eas init --id NUMEROID #use o ID do projeto criado no expo 
+   ```
+
+4. **Inicie o servidor do Expo:**
+   Execute:
+   ```bash
+   npx expo start --tunnel #para iniciar o servidor com tunnel já que estamos usando uma máquina virtual (CodeSpace)
    ```
    Isso abrirá o servidor de desenvolvimento do Expo no terminal. Use o QR code exibido para testar no seu dispositivo físico ou inicie o emulador no seu ambiente de trabalho.
 
-4. **Commits e envio das alterações:**
+5. **Desenvolva os componentes:**
+   Agora vamos criar os componentes de uma calculadora seguindo a interface abaixo:
+   [Calculator Design on Dribbble](https://dribbble.com/shots/14709020-Calculator)
+
+6. **Commits e envio das alterações:**
    Ao concluir cada etapa do tutorial, faça um commit para registrar o progresso:
    ```bash
    git status
@@ -41,28 +59,6 @@ Siga os passos da atividade para entender os conceitos em cada etapa. Durante o 
    git commit -m "Mensagem amigável sobre o progresso"
    git push origin main
    ```
-
-## Scripts Disponíveis
-
-No diretório do projeto, você pode executar os seguintes comandos:
-
-### `npm start`
-
-Inicia o servidor do Expo, permitindo que você teste o aplicativo em tempo real no dispositivo ou emulador. 
-
-### `npm run`
-
-- npm run android
-- npm run ios # requires an iOS device or macOS for access to an iOS simulator
-- npm run web
-
-### `npm test`
-
-Executa os testes definidos para o projeto. Consulte a documentação de testes para React Native caso precise configurar novos testes.
-
-### `npm run eject`
-
-Remove a abstração do Expo, permitindo acesso direto aos arquivos nativos do Android e iOS. **Use com cautela!** Apenas se necessário modificar os códigos nativos.
 
 ## Ferramentas e Recursos Adicionais
 
